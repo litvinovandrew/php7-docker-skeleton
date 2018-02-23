@@ -1,0 +1,41 @@
+version: '2.1'
+services:
+  web:
+    build:
+      context: ./docker/web
+      args:
+        HOST_UID: ${HOST_UID}
+        HOST_IP: ${HOST_IP}
+    environment:
+      - "TZ=Europe/Paris"
+    container_name: "project-web"
+    hostname: "project-web-hostname"
+    restart: always
+    ports:
+     - "80:80"
+    volumes:
+     - .:/var/www/html
+    links:
+     - mysql
+    depends_on:
+     - mysql
+    extra_hosts:
+    - "localhost localhost.localdomain:127.0.0.1"
+  mysql:
+    build:
+      context: ./docker/mysql
+      args:
+        HOST_UID: ${HOST_UID}
+    environment:
+      - "TZ=Europe/Paris"
+      - "MYSQL_ROOT_PASSWORD=root123"
+    container_name: "project-mysql"
+    hostname: "project-mysql-hostname"
+    restart: always
+    ports:
+     - "3306:3306"
+    volumes:
+     - mysql-storage:/var/lib/mysql
+volumes:
+  mysql-storage:
+

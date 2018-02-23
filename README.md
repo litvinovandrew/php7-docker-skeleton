@@ -1,4 +1,4 @@
-Repository contains docker-compose files fro quick configuring LAMP environment (PHP7, apache 2, Mysql 5.7) 
+Repository contains docker-compose files for quick configuring LAMP environment (PHP7, apache 2, Mysql 5.7) 
 
 A) Clone project from Github
 =======
@@ -50,4 +50,4 @@ MySql
 
 
 
-Copyright : <andleex@gmail.com> http://litvinov.tech
+© 2018 <andleex@gmail.com> http://litvinov.tech

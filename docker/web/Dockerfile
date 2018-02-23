@@ -74,7 +74,7 @@ RUN curl -sS -o /root/.bash_aliases https://raw.githubusercontent.com/morontt/do
 
 # Install composer
 RUN set -x && curl -sS https://getcomposer.org/installer | php \
-    && mv composer.phar /usr/local/bin/composer \
+    && mv composer.phar /usr/local/bin/composer
 
 # Add crontab
 COPY ./crontab /var/www/crontab

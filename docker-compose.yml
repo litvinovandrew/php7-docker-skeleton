@@ -12,7 +12,7 @@ services:
     hostname: "project-web-hostname"
     restart: always
     ports:
-     - "80:80"
+     - "11001:80"
     volumes:
      - .:/var/www/html
     links:
@@ -33,7 +33,7 @@ services:
     hostname: "project-mysql-hostname"
     restart: always
     ports:
-     - "3306:3306"
+     - "11002:3306"
     volumes:
      - mysql-storage:/var/lib/mysql
 volumes:

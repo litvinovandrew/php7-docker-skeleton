@@ -1,8 +1,10 @@
-Git hub
+Repository contains docker-compose files fro quick configuring LAMP environment (PHP7, apache 2, Mysql 5.7) 
+
+A) Clone project from Github
 =======
 1. git clone https://github.com/litvinovandrew/php7-docker-skeleton.git .
 
-Docker
+B) Prepare environment with Docker
 ======
 1. Copy `.env.dist` to `.env` in root project directory
 2. In `.env` change 1000 to own uid (`id` command in bash console)
@@ -14,7 +16,7 @@ Docker
 
 
 
-Laravel
+C) Laravel 5.5 (if you needed it)
 ========
 1)  composer create-project laravel/laravel=5.5 project
 2)  open project/.env and set 
@@ -29,7 +31,7 @@ Laravel
 5) Site is already available by address "http://localhost:11001/"
 
 
-Laravel Admin
+D) Laravel LTE Admin (if you need it)
 =============
 1) composer require encore/laravel-admin 1.5.*
 2) php artisan vendor:publish --provider="Encore\Admin\AdminServiceProvider"
@@ -45,3 +47,7 @@ Laravel Admin
 MySql
 =====
 11) You can connect MySql docker by "mysql -u project -p project123 -P 10113" from outside the docker
+
+
+
+Copyright : <andleex@gmail.com> http://litvinov.tech

@@ -46,7 +46,7 @@ D) Laravel LTE Admin (if you need it)
 
 MySql
 =====
-11) You can connect MySql docker by "mysql -u project -p project123 -P 10113" from outside the docker
+11) You can connect MySql docker by "mysql -u project -p project123 -P 11002" from outside the docker
 
 
 
